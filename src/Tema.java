@@ -1,17 +1,19 @@
 public class Tema {
     private int idTema;
-    private Tema subtema;
+    private Tema supertema;
     private String nombre;
 
-    public Tema(int idTema, Tema subtema, String nombre) {
+    public Tema(int idTema, Tema supertema, String nombre) {
         this.setIdTema(idTema);
-        this.setSubtema(subtema);
+        this.setSupertema(supertema);
         this.setNombre(nombre);
     }
+
+
     //Sobrecarga de constructores
     public Tema(int idTema, String nombre) {
-        this.idTema = idTema;
-        this.nombre = nombre;
+        this.setIdTema(idTema);
+        this.setNombre(nombre);
     }
 
     public int getIdTema() {
@@ -22,12 +24,12 @@ public class Tema {
         this.idTema = idTema;
     }
 
-    public Tema getSubtema() {
-        return subtema;
+    public Tema getSupertema() {
+        return supertema;
     }
 
-    public void setSubtema(Tema subtema) {
-        this.subtema = subtema;
+    public void setSupertema(Tema supertema) {
+        this.supertema = supertema;
     }
 
     public String getNombre() {
